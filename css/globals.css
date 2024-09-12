@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: "Roboto", sans-serif;
+    }
+}
+
+.table {
+    @apply w-full;
+    border-collapse: collapse;
+    &, td, th {
+        @apply border border-gray text-left p-2
+    }
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--success {
+    --toastify-color-success: #35A493;
+}
+.Toastify__toast {
+    --toastify-toast-bd-radius: 0;
+}
+.dotten::after {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: 7px;
+    right: 0;
+    border-bottom: 1px dotted #bdb7b7;
+    width: 100%;
+}
+@media screen and (max-width:767px) {
+    .dotten::after {
+        position: absolute;
+        content: '';
+        border: none;
+    } 
+}
+.li li:before {
+    content: '- ';
+    position: absolute;
+    margin-left: -12px;
+    margin-top: -2px;
+    font-size: 25px;
+}
+
+.document, .jornal {
+    @apply grid gap-6;
+    ol li {
+        @apply mt-4 list-inside list-decimal
+    }
+    ul li p, ol li p {
+        display: contents;
+    }
+    ul li {
+        @apply mt-4 ml-4 list-inside list-disc
+    }
+    h2 {
+        @apply text-2xl font-medium mb-4
+    }
+
+    hr {
+        @apply my-12 block border-none bg-gray-light;
+        height: 1px;
+    }
+}
+.parent {
+    grid-template-rows: auto 1fr auto;
+}
+::selection {
+    background: transparent;
+    text-shadow: none;
+}
+.line::after {
+    content: '';
+    position: absolute;
+    width: 61px;
+    height: 1px;
+    background-color: #666;
+    top: 13px;
+    left: 24%;
+}
+
+@media screen and (max-width:767px) {
+    #logo svg {
+        width: 318px;
+        height: 151px;
+    }
+    #social svg {
+        width: 40px;
+        height: 30px;
+    }
+    #work svg {
+        width: 50px;
+        height: 50px;
+    }
+    #work {
+        background-image: url(/img/banner-mobile.jpg) !important;
+    }
+}

@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002F","\u002Farticle\u002F[href]","\u002Fdoc\u002F[href]","\u002Fjornal"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
