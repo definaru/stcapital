@@ -1,0 +1,37 @@
+# Системные файлы
+*.log
+*.pot
+*.pyc
+*.sqlite3
+*.db
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+.DS_Store
+.docs
+
+# Виртуальное окружение
+venv/
+env/
+ENV/
+.venv/
+.idea/
+
+# Конфиденциальные данные
+*.pem
+*.key
+*.crt
+.env
+
+# Статические и медиа-файлы
+/static/
+media/
+
+# Миграции и кеши
+*.py[cod]
+db.sqlite3
+*.~*
+!migrations/
+migrations/*.py
+!migrations/__init__.py
